@@ -25,6 +25,7 @@
 		5F6F5C221F2888620028C615 /* right_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6F5C1E1F2888620028C615 /* right_top@2x.png */; };
 		5F6F5C251F2898040028C615 /* PIDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5C241F2898040028C615 /* PIDrawerView.m */; };
 		5F6F5C281F297C620028C615 /* GetPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5C271F297C620028C615 /* GetPhotoViewController.m */; };
+		5F6F5C2B1F2ADE2D0028C615 /* TKImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5C2A1F2ADE2D0028C615 /* TKImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		5F6F5C241F2898040028C615 /* PIDrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIDrawerView.m; sourceTree = "<group>"; };
 		5F6F5C261F297C620028C615 /* GetPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPhotoViewController.h; sourceTree = "<group>"; };
 		5F6F5C271F297C620028C615 /* GetPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPhotoViewController.m; sourceTree = "<group>"; };
+		5F6F5C291F2ADE2D0028C615 /* TKImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKImageView.h; sourceTree = "<group>"; };
+		5F6F5C2A1F2ADE2D0028C615 /* TKImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKImageView.m; sourceTree = "<group>"; };
 		CF184E6ADA6286B80B2CB7FE /* libPods-EditPhoto&Pic_demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EditPhoto&Pic_demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE9BDBC3126C96DA194B278 /* Pods-EditPhoto&Pic_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EditPhoto&Pic_demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EditPhoto&Pic_demo/Pods-EditPhoto&Pic_demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,6 +203,8 @@
 		5F6F5C151F2880D30028C615 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5F6F5C291F2ADE2D0028C615 /* TKImageView.h */,
+				5F6F5C2A1F2ADE2D0028C615 /* TKImageView.m */,
 				5F6F5C161F2880E00028C615 /* ClipView.h */,
 				5F6F5C171F2880E00028C615 /* ClipView.m */,
 				5F6F5C231F2898040028C615 /* PIDrawerView.h */,
@@ -414,6 +419,7 @@
 				5F6F5C141F287FF80028C615 /* EditPhotoViewController.m in Sources */,
 				5F6F5C281F297C620028C615 /* GetPhotoViewController.m in Sources */,
 				5F6F5BDD1F284A790028C615 /* AppDelegate.m in Sources */,
+				5F6F5C2B1F2ADE2D0028C615 /* TKImageView.m in Sources */,
 				5F6F5BDA1F284A790028C615 /* main.m in Sources */,
 				5F6F5C251F2898040028C615 /* PIDrawerView.m in Sources */,
 			);

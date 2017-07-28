@@ -40,8 +40,8 @@
 
     _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64,Screen_Width , Screen_Height - 64)];
     _imageView.backgroundColor = [UIColor whiteColor];
+    [_imageView setContentMode:UIViewContentModeScaleAspectFit];
     [self.view addSubview:_imageView];
-
     
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"拍照" style:UIBarButtonItemStyleDone target:self action:@selector(RightItemClick)];
     
