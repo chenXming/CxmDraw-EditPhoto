@@ -9,7 +9,7 @@
 #import "EditPhotoViewController.h"
 #import "ClipView.h"
 #import "TKImageView.h"
-
+#import "ViewController.h"
 
 
 @interface EditPhotoViewController ()
@@ -45,8 +45,6 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self initData];
     [self initInterface];
-    
-    
 
 }
 #pragma mark- initData
@@ -128,9 +126,13 @@
     
     NSLog(@"OK>>>>>>>");
     
-    UIImage *imageX = [_tkImageView currentCroppedImage];
-   // NSLog(@"imageX.W===%lf,imageX.H==%lf",imageX.size.width,imageX.size.height);
+    self.navigationController.navigationBarHidden = NO;
     
+    UIImage *imageX = [_tkImageView currentCroppedImage];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"BACKTOEDITIMAGE" object:self userInfo:@{@"image":imageX}];
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
     
 }
 - (void)clickRotateBtn{

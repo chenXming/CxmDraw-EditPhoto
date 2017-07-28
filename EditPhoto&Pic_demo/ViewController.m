@@ -9,13 +9,12 @@
 #import "ViewController.h"
 #import "GetPhotoViewController.h"
 
+@interface ViewController (){
 
-@interface ViewController ()
-{
-
-    UIImageView *_imageView;
 
 }
+
+@property (nonatomic,strong) UIImageView *imageView;
 
 @end
 
@@ -35,17 +34,21 @@
 }
 -(void)initData{
 
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeViewWithEditImage:) name:@"BACKTOEDITIMAGE" object:nil];
+    
 }
 -(void)makeMainUI{
 
-    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64,Screen_Width , Screen_Height - 64)];
-    _imageView.backgroundColor = [UIColor whiteColor];
-    [_imageView setContentMode:UIViewContentModeScaleAspectFit];
-    [self.view addSubview:_imageView];
+    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64,Screen_Width , Screen_Height - 64)];
+    self.imageView.backgroundColor = [UIColor whiteColor];
+    [self.imageView setContentMode:UIViewContentModeScaleAspectFit];
+    [self.view addSubview:self.imageView];
     
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"拍照" style:UIBarButtonItemStyleDone target:self action:@selector(RightItemClick)];
     
     self.navigationItem.rightBarButtonItem = rightItem;
+    
+    
     
 }
 -(void)RightItemClick{
@@ -56,6 +59,13 @@
     
     [self.navigationController pushViewController:getPhotoVc animated:YES];
     
+}
+
+-(void)changeViewWithEditImage:(NSNotification*)notify{
+
+    NSDictionary *dic = notify.userInfo;
+    self.imageView.image = [dic objectForKey:@"image"];
+
 }
 
 - (void)didReceiveMemoryWarning {

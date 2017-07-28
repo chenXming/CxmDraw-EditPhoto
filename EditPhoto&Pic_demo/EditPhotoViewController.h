@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol EditPhotoViewControllerDelegate <NSObject>
+
+-(void)backEditPhoto:(UIImage*)editImage;
+
+@end
+
 @interface EditPhotoViewController : UIViewController
 
 
-@property (nonatomic,retain) UIImage* image;
+@property (nonatomic,strong) UIImage* image;
 
 @end
