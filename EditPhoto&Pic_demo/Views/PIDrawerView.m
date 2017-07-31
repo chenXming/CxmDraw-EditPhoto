@@ -36,6 +36,8 @@
 }
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
+    
     [self initialize];
     
     NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);

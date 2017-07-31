@@ -26,6 +26,24 @@
 		5F6F5C251F2898040028C615 /* PIDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5C241F2898040028C615 /* PIDrawerView.m */; };
 		5F6F5C281F297C620028C615 /* GetPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5C271F297C620028C615 /* GetPhotoViewController.m */; };
 		5F6F5C2B1F2ADE2D0028C615 /* TKImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5C2A1F2ADE2D0028C615 /* TKImageView.m */; };
+		5FDCA28C1F2EBE9800929CE2 /* GrayScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDCA28B1F2EBE9800929CE2 /* GrayScale.m */; };
+		5FDCA28E1F2ED17E00929CE2 /* user_original_picture_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FDCA28D1F2ED17E00929CE2 /* user_original_picture_normal.png */; };
+		5FDCA2901F2ED19400929CE2 /* ic_moasic_toast.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FDCA28F1F2ED19400929CE2 /* ic_moasic_toast.png */; };
+		5FDCA29C1F2ED1D000929CE2 /* eraser_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FDCA2911F2ED1D000929CE2 /* eraser_normal.png */; };
+		5FDCA29D1F2ED1D000929CE2 /* eraser_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FDCA2921F2ED1D000929CE2 /* eraser_pressed.png */; };
+		5FDCA29E1F2ED1D000929CE2 /* moasic_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FDCA2931F2ED1D000929CE2 /* moasic_1.png */; };
+		5FDCA29F1F2ED1D000929CE2 /* moasic_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FDCA2941F2ED1D000929CE2 /* moasic_2.png */; };
+		5FDCA2A01F2ED1D000929CE2 /* moasic_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FDCA2951F2ED1D000929CE2 /* moasic_3.png */; };
+		5FDCA2A11F2ED1D000929CE2 /* moasic_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FDCA2961F2ED1D000929CE2 /* moasic_4.png */; };
+		5FDCA2A21F2ED1D000929CE2 /* moasic_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FDCA2971F2ED1D000929CE2 /* moasic_5.png */; };
+		5FDCA2A31F2ED1D000929CE2 /* moasic_last_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FDCA2981F2ED1D000929CE2 /* moasic_last_normal.png */; };
+		5FDCA2A41F2ED1D000929CE2 /* moasic_last_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FDCA2991F2ED1D000929CE2 /* moasic_last_pressed.png */; };
+		5FDCA2A51F2ED1D000929CE2 /* moasic_next_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FDCA29A1F2ED1D000929CE2 /* moasic_next_normal.png */; };
+		5FDCA2A61F2ED1D000929CE2 /* moasic_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FDCA29B1F2ED1D000929CE2 /* moasic_pressed.png */; };
+		5FDCA2A81F2ED24B00929CE2 /* moasic_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FDCA2A71F2ED24B00929CE2 /* moasic_selected.png */; };
+		5FDCA2AB1F2ED66400929CE2 /* moasic_next_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FDCA2A91F2ED66400929CE2 /* moasic_next_pressed.png */; };
+		5FDCA2AC1F2ED66400929CE2 /* moasic_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FDCA2AA1F2ED66400929CE2 /* moasic_normal.png */; };
+		5FDCA2AE1F2ED68D00929CE2 /* user_original_picture_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FDCA2AD1F2ED68D00929CE2 /* user_original_picture_pressed.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +97,25 @@
 		5F6F5C271F297C620028C615 /* GetPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPhotoViewController.m; sourceTree = "<group>"; };
 		5F6F5C291F2ADE2D0028C615 /* TKImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKImageView.h; sourceTree = "<group>"; };
 		5F6F5C2A1F2ADE2D0028C615 /* TKImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKImageView.m; sourceTree = "<group>"; };
+		5FDCA28A1F2EBE9800929CE2 /* GrayScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrayScale.h; sourceTree = "<group>"; };
+		5FDCA28B1F2EBE9800929CE2 /* GrayScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrayScale.m; sourceTree = "<group>"; };
+		5FDCA28D1F2ED17E00929CE2 /* user_original_picture_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_original_picture_normal.png; sourceTree = "<group>"; };
+		5FDCA28F1F2ED19400929CE2 /* ic_moasic_toast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_moasic_toast.png; sourceTree = "<group>"; };
+		5FDCA2911F2ED1D000929CE2 /* eraser_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eraser_normal.png; sourceTree = "<group>"; };
+		5FDCA2921F2ED1D000929CE2 /* eraser_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eraser_pressed.png; sourceTree = "<group>"; };
+		5FDCA2931F2ED1D000929CE2 /* moasic_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moasic_1.png; sourceTree = "<group>"; };
+		5FDCA2941F2ED1D000929CE2 /* moasic_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moasic_2.png; sourceTree = "<group>"; };
+		5FDCA2951F2ED1D000929CE2 /* moasic_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moasic_3.png; sourceTree = "<group>"; };
+		5FDCA2961F2ED1D000929CE2 /* moasic_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moasic_4.png; sourceTree = "<group>"; };
+		5FDCA2971F2ED1D000929CE2 /* moasic_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moasic_5.png; sourceTree = "<group>"; };
+		5FDCA2981F2ED1D000929CE2 /* moasic_last_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moasic_last_normal.png; sourceTree = "<group>"; };
+		5FDCA2991F2ED1D000929CE2 /* moasic_last_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moasic_last_pressed.png; sourceTree = "<group>"; };
+		5FDCA29A1F2ED1D000929CE2 /* moasic_next_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moasic_next_normal.png; sourceTree = "<group>"; };
+		5FDCA29B1F2ED1D000929CE2 /* moasic_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moasic_pressed.png; sourceTree = "<group>"; };
+		5FDCA2A71F2ED24B00929CE2 /* moasic_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moasic_selected.png; sourceTree = "<group>"; };
+		5FDCA2A91F2ED66400929CE2 /* moasic_next_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moasic_next_pressed.png; sourceTree = "<group>"; };
+		5FDCA2AA1F2ED66400929CE2 /* moasic_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moasic_normal.png; sourceTree = "<group>"; };
+		5FDCA2AD1F2ED68D00929CE2 /* user_original_picture_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_original_picture_pressed.png; sourceTree = "<group>"; };
 		CF184E6ADA6286B80B2CB7FE /* libPods-EditPhoto&Pic_demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EditPhoto&Pic_demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE9BDBC3126C96DA194B278 /* Pods-EditPhoto&Pic_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EditPhoto&Pic_demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EditPhoto&Pic_demo/Pods-EditPhoto&Pic_demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +188,7 @@
 				5F6F5C121F287FF80028C615 /* EditPhotoViewController.h */,
 				5F6F5C131F287FF80028C615 /* EditPhotoViewController.m */,
 				5F6F5C0E1F2864960028C615 /* PrefixHeader.pch */,
+				5FDCA2891F2EBE8A00929CE2 /* Others */,
 				5F6F5C151F2880D30028C615 /* Views */,
 				5F6F5C0F1F286BB30028C615 /* Images */,
 				5F6F5BE41F284A790028C615 /* Assets.xcassets */,
@@ -190,6 +228,23 @@
 		5F6F5C0F1F286BB30028C615 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5FDCA2AD1F2ED68D00929CE2 /* user_original_picture_pressed.png */,
+				5FDCA2A71F2ED24B00929CE2 /* moasic_selected.png */,
+				5FDCA2A91F2ED66400929CE2 /* moasic_next_pressed.png */,
+				5FDCA2AA1F2ED66400929CE2 /* moasic_normal.png */,
+				5FDCA2911F2ED1D000929CE2 /* eraser_normal.png */,
+				5FDCA2921F2ED1D000929CE2 /* eraser_pressed.png */,
+				5FDCA2931F2ED1D000929CE2 /* moasic_1.png */,
+				5FDCA2941F2ED1D000929CE2 /* moasic_2.png */,
+				5FDCA2951F2ED1D000929CE2 /* moasic_3.png */,
+				5FDCA2961F2ED1D000929CE2 /* moasic_4.png */,
+				5FDCA2971F2ED1D000929CE2 /* moasic_5.png */,
+				5FDCA2981F2ED1D000929CE2 /* moasic_last_normal.png */,
+				5FDCA2991F2ED1D000929CE2 /* moasic_last_pressed.png */,
+				5FDCA29A1F2ED1D000929CE2 /* moasic_next_normal.png */,
+				5FDCA29B1F2ED1D000929CE2 /* moasic_pressed.png */,
+				5FDCA28F1F2ED19400929CE2 /* ic_moasic_toast.png */,
+				5FDCA28D1F2ED17E00929CE2 /* user_original_picture_normal.png */,
 				5F6F5C191F28878B0028C615 /* rotate.png */,
 				5F6F5C101F286BE00028C615 /* takepic@2x.png */,
 				5F6F5C1B1F2888620028C615 /* left_bottom@2x.png */,
@@ -211,6 +266,16 @@
 				5F6F5C241F2898040028C615 /* PIDrawerView.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5FDCA2891F2EBE8A00929CE2 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				5FDCA28A1F2EBE9800929CE2 /* GrayScale.h */,
+				5FDCA28B1F2EBE9800929CE2 /* GrayScale.m */,
+			);
+			name = Others;
+			path = Images/Others;
 			sourceTree = "<group>";
 		};
 		85BE7E8B5F39CA1128075D62 /* Pods */ = {
@@ -334,13 +399,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FDCA29C1F2ED1D000929CE2 /* eraser_normal.png in Resources */,
+				5FDCA2A21F2ED1D000929CE2 /* moasic_5.png in Resources */,
+				5FDCA2A01F2ED1D000929CE2 /* moasic_3.png in Resources */,
+				5FDCA2A61F2ED1D000929CE2 /* moasic_pressed.png in Resources */,
+				5FDCA2AB1F2ED66400929CE2 /* moasic_next_pressed.png in Resources */,
+				5FDCA2A51F2ED1D000929CE2 /* moasic_next_normal.png in Resources */,
 				5F6F5C211F2888620028C615 /* right_bottom@2x.png in Resources */,
+				5FDCA2A31F2ED1D000929CE2 /* moasic_last_normal.png in Resources */,
 				5F6F5C1A1F28878B0028C615 /* rotate.png in Resources */,
+				5FDCA2AE1F2ED68D00929CE2 /* user_original_picture_pressed.png in Resources */,
 				5F6F5BE81F284A790028C615 /* LaunchScreen.storyboard in Resources */,
+				5FDCA29F1F2ED1D000929CE2 /* moasic_2.png in Resources */,
 				5F6F5C111F286BE00028C615 /* takepic@2x.png in Resources */,
 				5F6F5C1F1F2888620028C615 /* left_bottom@2x.png in Resources */,
+				5FDCA29E1F2ED1D000929CE2 /* moasic_1.png in Resources */,
+				5FDCA2A41F2ED1D000929CE2 /* moasic_last_pressed.png in Resources */,
+				5FDCA28E1F2ED17E00929CE2 /* user_original_picture_normal.png in Resources */,
+				5FDCA2AC1F2ED66400929CE2 /* moasic_normal.png in Resources */,
 				5F6F5C221F2888620028C615 /* right_top@2x.png in Resources */,
+				5FDCA29D1F2ED1D000929CE2 /* eraser_pressed.png in Resources */,
+				5FDCA2901F2ED19400929CE2 /* ic_moasic_toast.png in Resources */,
+				5FDCA2A81F2ED24B00929CE2 /* moasic_selected.png in Resources */,
 				5F6F5BE51F284A790028C615 /* Assets.xcassets in Resources */,
+				5FDCA2A11F2ED1D000929CE2 /* moasic_4.png in Resources */,
 				5F6F5C201F2888620028C615 /* left_top@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +502,7 @@
 				5F6F5C281F297C620028C615 /* GetPhotoViewController.m in Sources */,
 				5F6F5BDD1F284A790028C615 /* AppDelegate.m in Sources */,
 				5F6F5C2B1F2ADE2D0028C615 /* TKImageView.m in Sources */,
+				5FDCA28C1F2EBE9800929CE2 /* GrayScale.m in Sources */,
 				5F6F5BDA1F284A790028C615 /* main.m in Sources */,
 				5F6F5C251F2898040028C615 /* PIDrawerView.m in Sources */,
 			);
