@@ -315,6 +315,7 @@
 -(void)masBtnDown:(UIButton*)btn{
     
     NSLog(@"mas====");
+    _pidrawView.drawingMode = DrawingModePaint;
     if([btn.imageView.image isEqual:[UIImage imageNamed:@"moasic_normal"]]){
         [btn setImage:[UIImage imageNamed:@"moasic_pressed"] forState:UIControlStateNormal];
         [eraserBtn setImage:[UIImage imageNamed:@"eraser_normal"] forState:UIControlStateNormal];
@@ -325,7 +326,8 @@
 }
 -(void)eraserBtnDown:(UIButton*)btn{
     
-    
+    _pidrawView.drawingMode = DrawingModeErase;
+
     if([btn.imageView.image isEqual:[UIImage imageNamed:@"eraser_normal"]]){
         [btn setImage:[UIImage imageNamed:@"eraser_pressed"] forState:UIControlStateNormal];
         [masBtn setImage:[UIImage imageNamed:@"moasic_normal"] forState:UIControlStateNormal];
