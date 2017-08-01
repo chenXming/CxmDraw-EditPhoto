@@ -2,9 +2,10 @@
 //  ClipView.h
 //  CameraDemo
 //
-//  Created by xujiangtao on 15/11/11.
-//  Copyright © 2015年 xujiangtao. All rights reserved.
+//  Created by CXM  on 07/07/17.
+//  Copyright (c) 2017 CXM All rights reserved.
 //
+
 
 #import <UIKit/UIKit.h>
 

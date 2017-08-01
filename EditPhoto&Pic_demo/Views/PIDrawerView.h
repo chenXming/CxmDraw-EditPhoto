@@ -2,9 +2,10 @@
 //  PIDrawerView.h
 //  PIImageDoodler
 //
-//  Created by Pavan Itagi on 07/03/14.
-//  Copyright (c) 2014 Pavan Itagi. All rights reserved.
+//  Created by CXM  on 07/07/17.
+//  Copyright (c) 2017 CXM All rights reserved.
 //
+
 
 #import <UIKit/UIKit.h>
 

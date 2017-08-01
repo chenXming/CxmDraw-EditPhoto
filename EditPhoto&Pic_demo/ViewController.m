@@ -27,13 +27,11 @@
     UIImage *_sourseImage;
     UIImage *_grayImage;
     PIDrawerView *_pidrawView;
-    
+    UIImage *_rignalImage;
     UILabel *_alertLabel;
     
     
 }
-
-@property (nonatomic,strong) UIImageView *imageView;
 
 @end
 
@@ -60,7 +58,7 @@
 }
 -(void)makePIDrawView{
     
-    _pidrawView=[[PIDrawerView alloc] initWithFrame:CGRectMake(0,0,Screen_Width,Screen_Height-180)];
+    _pidrawView=[[PIDrawerView alloc] initWithFrame:CGRectMake(0,0,Screen_Width,_picImageView.frame.size.height)];
     _pidrawView.backgroundColor=[UIColor clearColor];
     _pidrawView.selectedColor=[UIColor whiteColor];
     _pidrawView.drawingMode=DrawingModePaint;
@@ -92,11 +90,6 @@
     
     [self.view addSubview:_downView];
     
-//   _picImageView=[[UIImageView alloc] initWithFrame:CGRectMake((Screen_Width-self.picImage.size.width)/2,(Screen_Height -self.picImage.size.height)/2,self.picImage.size.width,self.picImage.size.height)];
-//   _picImageView.backgroundColor=[UIColor whiteColor];
-//    _picImageView.image =[self.picImage convertToGrayscale];
-//    _grayImage =[self.picImage convertToGrayscale];
-//    [self.view addSubview:_picImageView];
     
     UIImage *origImage=[UIImage imageNamed:@"user_original_picture_normal"];
     _origBtn=[UIButton buttonWithType:UIButtonTypeCustom];
@@ -177,6 +170,16 @@
     eraLabel.font=[UIFont systemFontOfSize:13];
     [_downView addSubview:eraLabel];
     
+    
+    UIButton *clearBrn  =[UIButton buttonWithType:UIButtonTypeCustom];
+    [clearBrn setTitle:@"清除" forState:UIControlStateNormal];
+    [clearBrn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    clearBrn.titleLabel.font = [UIFont systemFontOfSize:17];
+    clearBrn.frame = CGRectMake(Screen_Width - 60, 20, 50, 30);
+    [clearBrn addTarget:self action:@selector(clearBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [_downView addSubview:clearBrn];
+    
+    
     UIButton *backBtn=[UIButton buttonWithType:UIButtonTypeCustom];
     backBtn.frame=CGRectMake(30,Screen_Height-40,40,30);
     [backBtn setTintColor:[UIColor whiteColor]];
@@ -210,10 +213,10 @@
 }
 -(void)makeMainUI{
 
-    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64,Screen_Width , Screen_Height - 64)];
-    self.imageView.backgroundColor = [UIColor whiteColor];
-    [self.imageView setContentMode:UIViewContentModeScaleAspectFit];
-    [self.view addSubview:self.imageView];
+    _picImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64,Screen_Width , Screen_Height - 64)];
+    _picImageView.backgroundColor = [UIColor cyanColor];
+    [_picImageView setContentMode:UIViewContentModeScaleAspectFit];
+    [self.view addSubview:_picImageView];
     
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"拍照" style:UIBarButtonItemStyleDone target:self action:@selector(RightItemClick)];
     
@@ -259,7 +262,9 @@
 -(void)changeViewWithEditImage:(NSNotification*)notify{
 
     NSDictionary *dic = notify.userInfo;
-    self.imageView.image = [dic objectForKey:@"image"];
+    _picImageView.image = [dic objectForKey:@"image"];
+    _rignalImage = [dic objectForKey:@"image"];
+    _grayImage =[_rignalImage convertToGrayscale];
 
 }
 #pragma mark - 点击事件
@@ -267,7 +272,7 @@
     
     if([btn.imageView.image isEqual:[UIImage imageNamed:@"user_original_picture_normal"]]){
         [btn setImage:[UIImage imageNamed:@"user_original_picture_pressed"] forState:UIControlStateNormal];
-//        _picImageView.image=self.picImage;
+        _picImageView.image=_rignalImage;
         
     }else{
         
@@ -320,10 +325,6 @@
 }
 -(void)eraserBtnDown:(UIButton*)btn{
     
-    NSLog(@"clear>>>>>>");
-    [_pidrawView.allPoints removeAllObjects];
-    _pidrawView.currentLine=0;
-    [_pidrawView clearView];
     
     if([btn.imageView.image isEqual:[UIImage imageNamed:@"eraser_normal"]]){
         [btn setImage:[UIImage imageNamed:@"eraser_pressed"] forState:UIControlStateNormal];
@@ -333,7 +334,15 @@
         [btn setImage:[UIImage imageNamed:@"eraser_normal"] forState:UIControlStateNormal];
     }
 }
+-(void)clearBtnClick:(UIButton*)btn{
 
+    NSLog(@"clear>>>>>>");
+    [_pidrawView.allPoints removeAllObjects];
+    _pidrawView.currentLine=0;
+    _pidrawView.drawingMode = DrawingModeNone;
+    [_pidrawView clearView];
+
+}
 -(void)sliderChange:(UISlider*)slider{
     
     NSLog(@"slider=====%f",slider.value);
