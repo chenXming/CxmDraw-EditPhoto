@@ -232,6 +232,8 @@
   //  NSLog(@"_allPoint==========%@",_allPoints);
     
 }
+
+
 #pragma mark - Touches methods
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {

@@ -36,5 +36,6 @@ typedef NS_ENUM(NSInteger, DrawingMode) {
 -(void)clearView;
 -(void)getPreviousPic;
 -(void)getNextPic;
+-(void)saveContextImage;
 
 @end

@@ -308,8 +308,39 @@
     
     NSLog(@"确定");
     
+    [self saveContextImage];
+    
+}
+#pragma mark - 保存图片
+- (void)saveContextImage{
+    // 截屏
+    // 开启上下文
+    UIGraphicsBeginImageContextWithOptions(_picImageView.bounds.size, NO, 0);
+    
+    // 获取上下文
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    
+    // 渲染图层
+    [_picImageView.layer renderInContext:ctx];
+    
+    // 获取上下文中的图片
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // 关闭上下文
+    UIGraphicsEndImageContext();
     
     
+    // 保存画板的内容放入相册
+    // image:写入的图片
+    // completionTarget图片保存监听者
+    // 注意：以后写入相册方法中，想要监听图片有没有保存完成，保存完成的方法不能随意乱写
+    UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+    
+}
+// 监听保存完成，必须实现这个方法
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    NSLog(@"保存图片成功");
 }
 
 -(void)masBtnDown:(UIButton*)btn{
