@@ -8,10 +8,10 @@
 
 #import "ViewController.h"
 #import "GetPhotoViewController.h"
-#import "PIDrawerView.h"
+#import "CXMDrawerView.h"
 #import "GrayScale.h"
 
-@interface ViewController ()<PIDrawDelegate>
+@interface ViewController ()<CXMDrawDelegate>
 {
     
     UIImageView *_picImageView;
@@ -26,7 +26,7 @@
     UIImageView *sliderView;
     UIImage *_sourseImage;
     UIImage *_grayImage;
-    PIDrawerView *_pidrawView;
+    CXMDrawerView *_cxmDrawView;
     UIImage *_rignalImage;
     UILabel *_alertLabel;
     
@@ -58,15 +58,15 @@
 }
 -(void)makePIDrawView{
     
-    _pidrawView=[[PIDrawerView alloc] initWithFrame:CGRectMake(0,0,Screen_Width,_picImageView.frame.size.height)];
-    _pidrawView.backgroundColor=[UIColor clearColor];
-    _pidrawView.selectedColor=[UIColor whiteColor];
-    _pidrawView.drawingMode=DrawingModePaint;
-    _pidrawView.lineWidht=6;
-    _pidrawView.my_delegate=self;
+    _cxmDrawView=[[CXMDrawerView alloc] initWithFrame:CGRectMake(0,0,Screen_Width,_picImageView.frame.size.height)];
+    _cxmDrawView.backgroundColor=[UIColor clearColor];
+    _cxmDrawView.selectedColor=[UIColor whiteColor];
+    _cxmDrawView.drawingMode=DrawingModePaint;
+    _cxmDrawView.lineWidht=6;
+    _cxmDrawView.my_delegate=self;
     _picImageView.userInteractionEnabled=YES;
     _picImageView.contentMode =  UIViewContentModeScaleAspectFit;
-    [_picImageView addSubview:_pidrawView];
+    [_picImageView addSubview:_cxmDrawView];
     
     _alertLabel=[[UILabel alloc] initWithFrame:CGRectMake(Screen_Width/2-60,100,120,25)];
     _alertLabel.backgroundColor=[UIColor blackColor];
@@ -245,15 +245,15 @@
     
     sliderView.frame=CGRectMake(20+(tapGes.view.tag-9000)*30,20,20,20);
     if(tapGes.view.tag==9000){
-        _pidrawView.lineWidht=3;
+        _cxmDrawView.lineWidht=3;
     }else if(tapGes.view.tag==9001){
-        _pidrawView.lineWidht=6;
+        _cxmDrawView.lineWidht=6;
     }else if(tapGes.view.tag==9002){
-        _pidrawView.lineWidht=9;
+        _cxmDrawView.lineWidht=9;
     }else if(tapGes.view.tag==9003){
-        _pidrawView.lineWidht=12;
+        _cxmDrawView.lineWidht=12;
     }else if(tapGes.view.tag==9004){
-        _pidrawView.lineWidht=15;
+        _cxmDrawView.lineWidht=15;
     }
     
     
@@ -283,8 +283,8 @@
 -(void)prvBtnDown:(UIButton*)btn{
     NSLog(@"pre");
     
-    [_pidrawView getPreviousPic];
-    if(_pidrawView.allPoints.count>0){
+    [_cxmDrawView getPreviousPic];
+    if(_cxmDrawView.allPoints.count>0){
         
         [nextBtn setImage:[UIImage imageNamed:@"moasic_next_pressed"] forState:UIControlStateNormal];
     }
@@ -293,8 +293,8 @@
 -(void)nextBtnDown:(UIButton*)btn{
     NSLog(@"next");
     
-    [_pidrawView getNextPic];
-    if(_pidrawView.allPoints.count>0){
+    [_cxmDrawView getNextPic];
+    if(_cxmDrawView.allPoints.count>0){
         
         [prvBtn setImage:[UIImage imageNamed:@"moasic_last_pressed"] forState:UIControlStateNormal];
     }
@@ -346,7 +346,7 @@
 -(void)masBtnDown:(UIButton*)btn{
     
     NSLog(@"mas====");
-    _pidrawView.drawingMode = DrawingModePaint;
+    _cxmDrawView.drawingMode = DrawingModePaint;
     if([btn.imageView.image isEqual:[UIImage imageNamed:@"moasic_normal"]]){
         [btn setImage:[UIImage imageNamed:@"moasic_pressed"] forState:UIControlStateNormal];
         [eraserBtn setImage:[UIImage imageNamed:@"eraser_normal"] forState:UIControlStateNormal];
@@ -357,7 +357,7 @@
 }
 -(void)eraserBtnDown:(UIButton*)btn{
     
-    _pidrawView.drawingMode = DrawingModeErase;
+    _cxmDrawView.drawingMode = DrawingModeErase;
 
     if([btn.imageView.image isEqual:[UIImage imageNamed:@"eraser_normal"]]){
         [btn setImage:[UIImage imageNamed:@"eraser_pressed"] forState:UIControlStateNormal];
@@ -370,10 +370,10 @@
 -(void)clearBtnClick:(UIButton*)btn{
 
     NSLog(@"clear>>>>>>");
-    [_pidrawView.allPoints removeAllObjects];
-    _pidrawView.currentLine=0;
-    _pidrawView.drawingMode = DrawingModeNone;
-    [_pidrawView clearView];
+    [_cxmDrawView.allPoints removeAllObjects];
+    _cxmDrawView.currentLine=0;
+    _cxmDrawView.drawingMode = DrawingModeNone;
+    [_cxmDrawView clearView];
 
 }
 -(void)sliderChange:(UISlider*)slider{

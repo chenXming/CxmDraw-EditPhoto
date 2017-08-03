@@ -1,21 +1,19 @@
 //
-//  PIDrawerView.h
-//  PIImageDoodler
+//  CXMDrawerView.h
+//  EditPhoto&Pic_demo
 //
-//  Created by CXM  on 07/07/17.
-//  Copyright (c) 2017 CXM All rights reserved.
+//  Created by 陈小明 on 2017/8/3.
+//  Copyright © 2017年 陈小明. All rights reserved.
 //
-
 
 #import <UIKit/UIKit.h>
-
 
 typedef NS_ENUM(NSInteger, DrawingMode) {
     DrawingModeNone = 0,
     DrawingModePaint,
     DrawingModeErase,
 };
-@protocol PIDrawDelegate <NSObject>
+@protocol CXMDrawDelegate <NSObject>
 
 -(void)prvLastOne;
 
@@ -24,8 +22,11 @@ typedef NS_ENUM(NSInteger, DrawingMode) {
 -(void)startDrawPic;
 
 @end
-@interface PIDrawerView : UIView
-@property (nonatomic, assign) id <PIDrawDelegate> my_delegate;
+
+
+@interface CXMDrawerView : UIView
+
+@property (nonatomic, assign) id <CXMDrawDelegate> my_delegate;
 @property (nonatomic, readwrite) DrawingMode drawingMode;
 @property (nonatomic, strong) UIColor *selectedColor;
 @property (nonatomic, retain) NSString *path;
@@ -36,6 +37,5 @@ typedef NS_ENUM(NSInteger, DrawingMode) {
 -(void)clearView;
 -(void)getPreviousPic;
 -(void)getNextPic;
--(void)saveContextImage;
 
 @end

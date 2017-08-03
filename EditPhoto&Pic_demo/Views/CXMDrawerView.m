@@ -1,26 +1,26 @@
 //
-//  PIDrawerView.m
-//  PIImageDoodler
+//  CXMDrawerView.m
+//  EditPhoto&Pic_demo
 //
-//  Created by CXM  on 07/07/17.
-//  Copyright (c) 2017 CXM All rights reserved.
+//  Created by 陈小明 on 2017/8/3.
+//  Copyright © 2017年 陈小明. All rights reserved.
 //
 
-#import "PIDrawerView.h"
+#import "CXMDrawerView.h"
 
 #define POINT(X)	[[pointArr objectAtIndex:X] CGPointValue]
 
-@interface PIDrawerView ()
+
+@interface CXMDrawerView ()
 {
     CGPoint previousPoint;
     CGPoint currentPoint;
     NSMutableArray *_pointArr;// 保存点
     
 }
-
 @end
 
-@implementation PIDrawerView
+@implementation CXMDrawerView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -47,7 +47,7 @@
     //存储绘图的图片
     NSString *fileName = [[[NSString alloc] initWithFormat:@"%@",@"painPicture"]stringByAppendingString:@".png"];
     self.path = [self.path stringByAppendingPathComponent:fileName];
-   
+    
 }
 
 - (void)drawRect:(CGRect)rect
@@ -98,7 +98,7 @@
 
 - (void)drawLineNew
 {
- 
+    
     UIGraphicsBeginImageContext(self.bounds.size);
     [self.viewImage drawInRect:self.bounds];
     
@@ -131,7 +131,7 @@
     }
 }
 -(void)clearView{
-  
+    
     UIGraphicsBeginImageContext(self.bounds.size);
     [self.viewImage drawInRect:self.bounds];
     
@@ -150,13 +150,13 @@
     _currentLine--;
     
     if(_currentLine<0){
-    
+        
         NSLog(@"没有了");
         _currentLine = 0;
         [self.my_delegate prvLastOne];
-    
+        
     }else{
-      
+        
         for (NSInteger x=0; x<_currentLine; x++) {
             
             NSArray *pointArr=[_allPoints objectAtIndex:x];
@@ -187,16 +187,16 @@
     }
     
     
-   // NSLog(@"_pointArr==============%@",[_allPoints objectAtIndex:_currentLine]);
+    // NSLog(@"_pointArr==============%@",[_allPoints objectAtIndex:_currentLine]);
     
-
+    
 }
 -(void)getNextPic{
     
-     _currentLine++;
+    _currentLine++;
     
     if(_currentLine >_allPoints.count){
-    
+        
         NSLog(@"没有了");
         _currentLine = _allPoints.count;
         [self.my_delegate nextlastOne];
@@ -204,32 +204,32 @@
     }else{
         
         NSArray *pointArr=[_allPoints objectAtIndex:_currentLine-1];
-            for (NSInteger i=0;i<pointArr.count-1; i++) {
-                
-                CGPoint point0=POINT(i);
-                CGPoint point1=POINT(i+1);
-                
-                UIGraphicsBeginImageContext(self.bounds.size);
-                [self.viewImage drawInRect:self.bounds];
-                
-                CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
-                CGContextSetStrokeColorWithColor(UIGraphicsGetCurrentContext(), self.selectedColor.CGColor);
-                CGContextSetLineWidth(UIGraphicsGetCurrentContext(), self.lineWidht);
-                CGContextBeginPath(UIGraphicsGetCurrentContext());
-                CGContextMoveToPoint(UIGraphicsGetCurrentContext(), point0.x, point0.y);
-                CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), point1.x, point1.y);
-                
-                CGContextStrokePath(UIGraphicsGetCurrentContext());
-                self.viewImage = UIGraphicsGetImageFromCurrentImageContext();
-                UIGraphicsEndImageContext();
-                previousPoint = currentPoint;
-                
-                [self setNeedsDisplay];
-            }
+        for (NSInteger i=0;i<pointArr.count-1; i++) {
+            
+            CGPoint point0=POINT(i);
+            CGPoint point1=POINT(i+1);
+            
+            UIGraphicsBeginImageContext(self.bounds.size);
+            [self.viewImage drawInRect:self.bounds];
+            
+            CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
+            CGContextSetStrokeColorWithColor(UIGraphicsGetCurrentContext(), self.selectedColor.CGColor);
+            CGContextSetLineWidth(UIGraphicsGetCurrentContext(), self.lineWidht);
+            CGContextBeginPath(UIGraphicsGetCurrentContext());
+            CGContextMoveToPoint(UIGraphicsGetCurrentContext(), point0.x, point0.y);
+            CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), point1.x, point1.y);
+            
+            CGContextStrokePath(UIGraphicsGetCurrentContext());
+            self.viewImage = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            previousPoint = currentPoint;
+            
+            [self setNeedsDisplay];
+        }
         
     }
     
-  //  NSLog(@"_allPoint==========%@",_allPoints);
+    //  NSLog(@"_allPoint==========%@",_allPoints);
     
 }
 
@@ -261,5 +261,6 @@
     _currentLine = _allPoints.count;
     [self handleTouches];
 }
+
 
 @end
