@@ -13,6 +13,7 @@
 
 @interface GetPhotoViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 {
+    
 
     UIImagePickerController *imagePicker;
 

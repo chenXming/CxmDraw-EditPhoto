@@ -17,7 +17,6 @@
 		5F6F5BFE1F284A790028C615 /* EditPhoto_Pic_demoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5BFD1F284A790028C615 /* EditPhoto_Pic_demoUITests.m */; };
 		5F6F5C111F286BE00028C615 /* takepic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6F5C101F286BE00028C615 /* takepic@2x.png */; };
 		5F6F5C141F287FF80028C615 /* EditPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5C131F287FF80028C615 /* EditPhotoViewController.m */; };
-		5F6F5C181F2880E00028C615 /* ClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6F5C171F2880E00028C615 /* ClipView.m */; };
 		5F6F5C1A1F28878B0028C615 /* rotate.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6F5C191F28878B0028C615 /* rotate.png */; };
 		5F6F5C1F1F2888620028C615 /* left_bottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6F5C1B1F2888620028C615 /* left_bottom@2x.png */; };
 		5F6F5C201F2888620028C615 /* left_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6F5C1C1F2888620028C615 /* left_top@2x.png */; };
@@ -84,8 +83,6 @@
 		5F6F5C101F286BE00028C615 /* takepic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "takepic@2x.png"; sourceTree = "<group>"; };
 		5F6F5C121F287FF80028C615 /* EditPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPhotoViewController.h; sourceTree = "<group>"; };
 		5F6F5C131F287FF80028C615 /* EditPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPhotoViewController.m; sourceTree = "<group>"; };
-		5F6F5C161F2880E00028C615 /* ClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClipView.h; sourceTree = "<group>"; };
-		5F6F5C171F2880E00028C615 /* ClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClipView.m; sourceTree = "<group>"; };
 		5F6F5C191F28878B0028C615 /* rotate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotate.png; sourceTree = "<group>"; };
 		5F6F5C1B1F2888620028C615 /* left_bottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_bottom@2x.png"; sourceTree = "<group>"; };
 		5F6F5C1C1F2888620028C615 /* left_top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_top@2x.png"; sourceTree = "<group>"; };
@@ -260,8 +257,6 @@
 			children = (
 				5F6F5C291F2ADE2D0028C615 /* TKImageView.h */,
 				5F6F5C2A1F2ADE2D0028C615 /* TKImageView.m */,
-				5F6F5C161F2880E00028C615 /* ClipView.h */,
-				5F6F5C171F2880E00028C615 /* ClipView.m */,
 				5FE70FC61F32B2A100DB46D3 /* CXMDrawerView.h */,
 				5FE70FC71F32B2A100DB46D3 /* CXMDrawerView.m */,
 			);
@@ -496,7 +491,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F6F5C181F2880E00028C615 /* ClipView.m in Sources */,
 				5F6F5BE01F284A790028C615 /* ViewController.m in Sources */,
 				5FE70FC81F32B2A100DB46D3 /* CXMDrawerView.m in Sources */,
 				5F6F5C141F287FF80028C615 /* EditPhotoViewController.m in Sources */,
