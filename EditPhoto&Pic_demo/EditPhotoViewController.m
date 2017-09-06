@@ -7,7 +7,6 @@
 //
 
 #import "EditPhotoViewController.h"
-#import "ClipView.h"
 #import "TKImageView.h"
 #import "ViewController.h"
 
