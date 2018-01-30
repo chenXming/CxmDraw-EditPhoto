@@ -65,7 +65,7 @@
         imagePicker.delegate = self;
         
         imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-        imagePicker.allowsEditing = YES;
+      //  imagePicker.allowsEditing = YES; // 是否展示编辑裁剪页面
         WeakSelf(self);
         [self presentViewController:imagePicker animated:NO completion:^{
             weakself.navigationController.view.alpha = 1;
@@ -207,10 +207,19 @@
     NSLog(@"image picker delegate == %@",info);
     UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     
-    EditPhotoViewController* editVC = [[EditPhotoViewController alloc] init];
-    editVC.image = image;
-    [picker pushViewController:editVC animated:NO];
-    
+    if(picker.sourceType  == UIImagePickerControllerSourceTypeSavedPhotosAlbum){
+        
+        EditPhotoViewController* editVC = [[EditPhotoViewController alloc] init];
+        editVC.image = image;
+        [picker pushViewController:editVC animated:NO];
+    }else{
+     
+        [picker dismissViewControllerAnimated:YES completion:^{
+            
+              [[NSNotificationCenter defaultCenter] postNotificationName:@"BACKTOEDITIMAGE" object:self userInfo:@{@"image":image}];
+        }];
+        
+    }
 }
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
 
